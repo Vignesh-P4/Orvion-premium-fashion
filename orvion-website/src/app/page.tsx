@@ -1,14 +1,10 @@
-import About from "@/components/About";
 import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-black text-white font-sans py-20">
       <Hero />
-      
-      {/* <Features /> */}
-      
+      {/* Other sections below */}
     </main>
   );
 }

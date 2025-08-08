@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -9,7 +8,7 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); // Hydration-safe
+    setMounted(true);
   }, []);
 
   return (

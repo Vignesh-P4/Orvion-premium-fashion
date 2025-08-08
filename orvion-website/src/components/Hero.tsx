@@ -1,4 +1,3 @@
-// File: src/components/Hero.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -12,17 +11,17 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/images/hero-bg.png"
-          alt="Luxury fashion background"
+          alt="Hero Background"
           fill
-          priority
           className="object-cover opacity-60"
+          priority
         />
       </div>
 
-      {/* Dark overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-10" />
 
-      {/* Hero content */}
+      {/* Content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

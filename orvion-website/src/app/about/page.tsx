@@ -1,7 +1,9 @@
+// src/components/About.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function About() {
   const [hasMounted, setHasMounted] = useState(false);
@@ -13,16 +15,18 @@ export default function About() {
   if (!hasMounted) return null;
 
   return (
-    <section className="relative text-white pt-24 py-24 px-6 md:px-12 overflow-hidden">
-      {/* Background Image (not fixed, scrolls with page) */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-      <img
-        src="/images/about-bg.png"
-        alt="About Background"
-        className="w-full h-full object-cover relative top-20"
-      />
-      <div className="absolute inset-0 bg-black opacity-60" />
-    </div>
+    <section className="relative text-white pt-24 pb-32 px-6 md:px-12 overflow-hidden">
+      {/* Background Image (shifted down) */}
+      <div className="absolute inset-x-0 top-16 bottom-0 z-0 overflow-hidden">
+        <Image
+          src="/images/about-bg.png"
+          alt="About Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black opacity-60" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -45,7 +49,8 @@ export default function About() {
           simplicity, elegance, and authenticity. Founded by a group of dreamers,
           creators, and bold thinkers, our brand believes in empowering
           individuality and expression through design.
-          <br /><br />
+          <br />
+          <br />
           From the streets of everyday life to the runways of the future,
           Orvion is where high-quality materials meet avant-garde creativity. We
           focus on crafting timeless pieces that speak to both fashion and function.
@@ -58,7 +63,7 @@ export default function About() {
           className="text-lg mt-8 leading-relaxed text-neutral-200"
         >
           Every design carries a story. Every stitch is intentional. This is not
-          just a brand — it's a movement. It's about the courage to stand out,
+          just a brand &mdash; it&apos;s a movement. It&apos;s about the courage to stand out,
           the elegance of simplicity, and the confidence of owning your identity.
         </motion.p>
 
